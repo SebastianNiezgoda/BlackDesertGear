@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <title>Bdo Gear</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <style>
+        body {
+    background-image: url('BdoGear.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+   }
+    </style>
+<ul>
+    <li><a href="https://sebastianniezgoda.github.io/BlackDesertGear/"><i class="bi bi-bank2"></i> Home</a></li>
+    <li>
+        <a href="#">Armor <i class="bi bi-caret-down-fill"></i></a>
+        <ul class="dropdown">
+            <li><a href="helmet.html">Helmet </a></li>
+            <li><a href="chest.html">Chest</a></li>
+            <li><a href="gloves.html">Gloves</a> </li>
+            <li><a href="boots.html">Boots</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Weapons <i class="bi bi-caret-down-fill"></i></a>
+        <ul class="dropdown">
+            <li><a href="mainweapon.html">Main weapon</a></li>
+            <li><a href="awaweapon.html">Awakening weapon</a></li>
+             <li><a href="Sub.html">Sub weapon</a></li>
+            
+        </ul>
+    </li>
+    <li>
+        <a href="#">Accessories <i class="bi bi-caret-down-fill"></i></a>
+        <ul class="dropdown">
+            <li><a href="ring.html">Ring</a></li>
+            <li><a href="earring.html">Earring</a></li>
+            <li><a href="necklacke.html">Necklace</a></li>
+            <li><a href="belt.html">Belt</a></li>
+            
+        </ul>
+    </li>
+    <li>
+        <a href="https://mmotimer.com/bdo/"><i class="bi bi-alarm"></i> BOSS TIMER</a>
+    </li>
+    <li>
+        <a href="https://www.naeu.playblackdesert.com/en-US/Main/Index"><i class="bi bi-signpost-2-fill"></i> BDO Page</a>
+    </li>
+    <li>
+        <a href="https://garmoth.com/characters"><i class="bi bi-calculator-fill"></i> Gear Planner</a>
+    </li>
+    <li><a href="Timer.html">Timer</a></li>
+
+</ul>
+<script>
+    function countdown(seconds) {
+     var interval = setInterval(function() {
+ 
+         if (seconds <= 0) 
+         clearInterval(interval); //break the interval
+         seconds--;
+         
+         console.log("Seconds:", seconds)
+     }, 1000); //time in millaseconds to wait
+   }
+ 
+   countdown(5);
+ </script>
+    
+
+ 
+</body>
+</html>
