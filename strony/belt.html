@@ -62,20 +62,48 @@
     <li><a href="Timer.html">Timer</a></li>
 
 </ul>
-<script>
-    function countdown(seconds) {
-     var interval = setInterval(function() {
- 
-         if (seconds <= 0) 
-         clearInterval(interval); //break the interval
-         seconds--;
-         
-         console.log("Seconds:", seconds)
-     }, 1000); //time in millaseconds to wait
-   }
- 
-   countdown(5);
- </script>
+</ul>
+<div id="mydiv">
+<label for="primary-option">Select Belt:</label>
+<select id="primary-option" onchange="showSecondaryOption()" class="JD">
+  <option value="option1">Tuvala</option>
+  <option value="option2">Capotia Belt</option>
+  <option value="option3">Tungrad Belt</option>
+  <option value="option4">Basilisk Belt</option>
+  <option value="option5">Valtara Belt</option>
+</select>
+
+
+    <div id="secondary-option" style="display:none;" style="position: relative;top: 300px; left: 100px;">
+    <label for="secondary-select">Select enchantment level:</label>
+    <select id="secondary-select">
+        <option value="acc/belt/capotia/capotiastk.png">Stock</option>
+        <option value="acc/belt/capotia/cap1.png">Pri</option>
+        <option value="acc/belt/capotia/2.png">Duo</option>
+        <option value="acc/belt/capotia/3.png">Tri</option>
+        <option value="acc/belt/capotia/4.png">Tet</option>
+        <option value="acc/belt/capotia/5.png">Pen</option>
+    </select>
+    </div>
+
+    <div id="secondary-option1" style="display:none;" style="position: relative;top: 300px; left: 100px;">
+        <label for="secondary-select1">Select enchantment level123:</label>
+        <select id="secondary-select1">
+            <option value="acc/belt/basilisk/0.png">Stock</option>
+            <option value="acc/belt/basilisk/1.png">Pri</option>
+            <option value="acc/belt/basilisk/2.png">Duo</option>
+            <option value="acc/belt/basilisk/3.png">Tri</option>
+            <option value="acc/belt/basilisk/4.png">Tet</option>
+            <option value="acc/belt/basilisk/5.png">Pen</option>
+        </select>
+        </div>
+
+</div>
+<div id="image-container">
+    <img id="my-image" src="image1.jpg" class="moveme">
+  </div>
+
+  <script src="belt.js"></script>
     
 
  
