@@ -62,20 +62,39 @@
     <li><a href="Timer.html">Timer</a></li>
 
 </ul>
-<script>
-    function countdown(seconds) {
-     var interval = setInterval(function() {
- 
-         if (seconds <= 0) 
-         clearInterval(interval); //break the interval
-         seconds--;
-         
-         console.log("Seconds:", seconds)
-     }, 1000); //time in millaseconds to wait
-   }
- 
-   countdown(5);
- </script>
+<div id="mydiv">
+<label for="primary-option">Select Armor:</label>
+<select id="primary-option" onchange="showSecondaryOption()" class="JD">
+  <option value="option1">Dim Tree</option>
+  <option value="option2">Red Nose</option>
+  <option value="option3">Fallen God</option>
+</select>
+
+
+    <div id="secondary-option" style="display:none;" style="position: relative;top: 300px; left: 100px;">
+    <label for="secondary-select">Select enchantment level:</label>
+    <select id="secondary-select">
+        <option value="armors/fallengod/21.png">Stock</option>
+        <option value="armors/fallengod/1.jpg">Pri</option>
+        <option value="armors/fallengod/2.png">Duo</option>
+        <option value="armors/fallengod/3.png">Tri</option>
+        <option value="armors/fallengod/4.png">Tet</option>
+        <option value="armors/fallengod/5.png">Pen</option>
+    </select>
+    </div>
+</div>
+<div id="image-container">
+    <img id="my-image" src="image1.jpg" class="moveme">
+  </div>
+
+  <script src="chest.js"></script>
+
+
+    
+
+
+
+
     
 
  

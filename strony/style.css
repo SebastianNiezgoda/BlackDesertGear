@@ -1,5 +1,73 @@
 
 
+.moveme {position: absolute;
+    top: 150px;
+    left: 400px;
+
+}
+.moveme1{position: absolute;
+    top: 150px;
+    left: 1000px;}
+
+    #mydiv{
+        position: relative;
+  top: 50px;
+  left: 100px;
+    }
+    select {
+        display: block;
+       
+        height: 40px;
+        padding: 8px 12px;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        border-radius: 4px;
+        background-color: #f2f2f2;
+        color: #333;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);}
+        /* Style the select options */
+select option {
+    font-size: 14px;
+    font-weight: normal;
+  }
+  
+  /* Style the select arrow */
+  select::-ms-expand {
+    display: none;
+  }
+  
+  select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #888;
+  }
+  
+  /* Style the select when it's focused */
+  select:focus {
+    outline: none;
+    box-shadow: 0 0 4px rgba(0,0,0,0.2);
+    background-color: #fff;
+  }
+  
+  /* Style the select when an option is selected */
+  select option:checked {
+    background-color: #e0e0e0;
+    font-weight: bold;
+  }
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+
+
 
 * {
     padding:0 ;
