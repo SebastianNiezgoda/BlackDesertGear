@@ -1,0 +1,81 @@
+create database wyzszauczelnia
+use wyzszauczelnia
+
+create table studenci(
+id_studenta int identity(1,1) primary key,
+nazwisko varchar(30) not null,
+imie varchar(30) not null,
+data_urodzenia date check(data_urodzenia<=dateadd(year,-18,getdate())),
+nr_grupy char(15) not null
+)
+
+create table grupy(
+nr_grupy char(15) primary key
+)
+
+alter table studenci add
+constraint rsg foreign key(nr_grupy) references grupy(nr_grupy)
+on delete no action on update cascade
+
+
+create table wyklady(
+id_wykladu int identity(1,1) primary key,
+nazwa_wykladu varchar(30) not null UNIQUE,
+liczba_godzin int check(liczba_godzin<=60),
+id_wykladowcy int
+)
+
+create table wykladowcy(
+id_wykladowcy int  primary key,
+stopien_tytul varchar(30),
+katedra varchar(30)
+)
+
+alter table wyklady add
+constraint rww foreign key(id_wykladowcy) references wykladowcy(id_wykladowcy)
+
+
+create table pracownicy(
+id_pracownika int identity(1,1) primary key,
+nazwisko varchar(30),
+imie varchar(30),
+data_zatrudnienia date check(data_zatrudnienia<=getdate()),
+PESEL int,
+)
+
+alter table wykladowcy add
+constraint rwp foreign key(id_wykladowcy) references pracownicy(id_pracownika)
+on delete cascade on update no action
+
+create table stopnie_tytuly(
+stopien_tytul varchar(30) primary key,
+stawka int not null,
+)
+
+alter table wykladowcy add
+constraint rws foreign key(stopien_tytul) references stopnie_tytuly(stopien_tytul)
+on delete no action on update cascade
+
+create table oceny(
+ocena int primary key,
+)
+
+create table oceny_studentow(
+id_studenta int,
+id_wykladu int,
+data_egzaminu date check(data_egzaminu<=getdate()) default getdate(),
+ocena int
+
+)
+
+create table studenci_wyklady(
+id_studenta int,
+id_wykladu int
+)
+
+alter table oceny_studentow add
+constraint fff foreign key(ocena) references oceny(ocena)
+
+alter table studenci_wyklady add
+constraint fffff foreign key(id_studenta) references studenci(id_studenta),
+constraint ffffff foreign key(id_wykladu) references wyklady(id_wykladu)
